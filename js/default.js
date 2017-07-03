@@ -41,7 +41,7 @@ function getFileName(){
  return window.location.href.split('/');
  }
  
- varfilename = getFileName();
+ var filename = getFileName();
  var opt;
  if(filename === 'other.html'){
   opt =document.querySelector('option[value="other.html"]');
