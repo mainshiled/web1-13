@@ -4,13 +4,13 @@ function setCookie(c_name,value,expiredays){
  var exdate = cltime.toUTCString();
  var s="";
  s += c_name+"="+escape(value);
- s +=";path="+location.pathname;
+ s +="; path="+location.pathname;
  if(expiredays){
   s +="; expires" +exdate+";";
  }else{
   s +=";";
  }
- docment.cookie=s;
+ document.cookie=s;
 }
 
 function getCookie(c_name){
