@@ -50,7 +50,7 @@ function getFileName(){
 }
 opt.selected = true;
 
-document.getElementById('form').select.onchange =function(){
+document.getElementById('form').select.onchange = function(){
  location.href =document.getElementById('form').select.value;
  }
 
