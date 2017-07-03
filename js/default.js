@@ -80,6 +80,6 @@ var separate_time =function(time){
    var thmubs =document.querySelectorAll('.thumb');
    for(idx in thmukbs){
     thmubs[idx].onlick=function(){
-     document.getElementById("bigimg").src = 'img/' +this.dataset.image+'.png';
+     document.getElementById("bigimg").src = this.dataset.image+'.png';
      }
      }
