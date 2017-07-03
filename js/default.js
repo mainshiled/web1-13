@@ -38,7 +38,7 @@ if(last_date){
  var current_time =new Date();
  setCookie('lastDate',current_time.toString(),7);
 function getFileName(){
- return windows.location.href.split('/');
+ return window.location.href.split('/');
  }
  
  varfilename = getFileName();
