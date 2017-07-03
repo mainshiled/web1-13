@@ -48,7 +48,7 @@ function getFileName(){
   }else{
   opt =document.querySelector('option[value="index.html"]');
 }
-opt.selected = trun;
+opt.selected = true;
 
 document.getElementById('form').select.onchange =function(){
  location.href =document.getElementById('form').select.value;
