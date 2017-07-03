@@ -1,3 +1,33 @@
+function setCookie(c_name,value,expiredays){
+ var extime =new Date().getTime();
+ var cltime =new Date(extime+(60*60*24*1000*expiredays));
+ var exdate = cltime.toUTCString();
+ var s="";
+ s += c_name+"="+escape(value);
+ s +=";path="+location.pathname;
+ if(expiredays){
+  s +="; expires" +exdate+";";
+ }else{
+  s +=";";
+ }
+ docment.cookie=s;
+}
+
+function getCookie(c_name){
+ var st="";
+ var ed="";
+ if(0<docment.cookie.length){
+  st=docment.cookie.indexOf(c_name + "=");
+  if(st!=-1){
+   st=st+c_name.length+1;
+   ed=docment.cookie.indexOf(";",st);
+   if(ed==-1) ed=docment.cookie.length;
+   return unescape(docment.cookie.substring(st,ed));
+  }
+ }
+ return"";
+}
+
 var last_date = getCookie('lastDate');
 if(last_dater){
  document.getElementById('cookie').textContent='前回訪れた時間:'+last_date;
