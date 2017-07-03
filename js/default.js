@@ -78,7 +78,7 @@ var separate_time =function(time){
    }
    
    var thmubs =document.querySelectorAll('.thumb');
-   for(idx in thmukbs){
+   for(idx in thmubs){
     thmubs[idx].onlick=function(){
      document.getElementById("bigimg").src = this.dataset.image+'.png';
      }
